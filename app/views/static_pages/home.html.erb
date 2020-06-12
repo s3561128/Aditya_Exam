@@ -1,0 +1,57 @@
+  <h1 class="mainheader">Clock+</h1>
+  <h2 class="maintext"> Clock+ bulit by Aditya Deswal -email s3561128@student.rmit.edu.au  - attempt grade level: HD LEVEL  tutor group Tuesday 6:30pm Homy<h2>
+<div class="row h-100 ">
+   <div class="col-sm-12 my-auto">
+    <div class="card card-block text-white modes" >
+      <span class="greendot" style="display: inline-block;"></span><li style="display: inline-block; color: white;" > Business time</li><br>
+      <span class="yellowdot" style="display: inline-block;"></span><li style="display: inline-block; color: white;">Business overtime</li><br>
+      <span class="reddot" style="display: inline-block;"></span><li style="display: inline-block; color: white;">Personal time</li><br>
+      <span class="dot" style="display: inline-block;"></span><li style="display: inline-block; color: white;">Sleeping time</li>
+
+    </div>
+    <% time1 = Time.zone.now.in_time_zone("Melbourne")%>
+     <div class="jumbotron worldclock">
+        <h2 class="time" style="color: white;"><%=Time.zone = "Melbourne"  %>&nbsp &nbsp<%=Time.zone.now.strftime('%I:%M') %></h2>
+                  <% if Time.zone.now.strftime('%I:%M:%p') > "11:00:PM" && Time.zone.now.strftime('%I:%M:%p') < "8:00:AM"%>
+           <span class="dot" style="display: inline-block;"></span><p style="display: inline-block; color: white;" > Today</p><hr>
+
+            <% elsif Time.zone.now.strftime('%I:%M:%p') > "09:00:AM" && Time.zone.now.strftime('%I:%M:%p') < "05:59:PM"%>
+           <span class="greendot" style="display: inline-block;"></span><p style="display: inline-block; color: white;" > Today</p><hr>
+
+           <% elsif Time.zone.now.strftime('%I:%M:%p') > "08:00:AM" && Time.zone.now.strftime('%I:%M:%p') < "08:59:AM" &&  Time.zone.now.strftime('%I:%M:%p') > "08:00:PM" && Time.zone.now.strftime('%I:%M:%p') < "10:59:PM"%>
+           <span class="reddot" style="display: inline-block;"></span><p style="display: inline-block; color: white;" > Today</p><hr>
+
+           <% elsif Time.zone.now.strftime('%I:%M:%p') > "11:00:PM" && Time.zone.now.strftime('%I:%M:%p') < "07:59:AM"%>
+           <span class="yellowdot" style="display: inline-block;"></span><p style="display: inline-block; color: white;" > Today</p><hr>
+            <% end if%>
+        
+        <h2 class="time" style="color: white;"><%=Time.zone = "Arizona"  %>&nbsp &nbsp<%=Time.zone.now.strftime('%I:%M') %></h2>
+            <p style="float: left; color: white; display: inline;" ><%= 
+              time2 = Time.zone.now.in_time_zone("Arizona") 
+              difference = ( time2.utc_offset - time1.utc_offset) / 60 / 60 %>h</p>
+            <p style="margin-left: 200px; color: white; display: inline;"><%= Time.zone.today %></p>
+        <hr>
+        <h2 class="time" style="color: white;"><%=Time.zone = "London"  %>&nbsp &nbsp<%=Time.zone.now.strftime('%I:%M') %></h2>
+            <p style="float: left; color: white; display: inline;" ><%=
+            time3 = Time.zone.now.in_time_zone("London") 
+              difference = (time3.utc_offset - time1.utc_offset) / 60 / 60 %>h</p>
+            <p style="margin-left: 200px; color: white; display: inline;"><%= Time.zone.today %></p>
+        <hr>
+
+     </div>
+     
+     <div class="btn-group btn-group-toggle themebuttons " data-toggle="buttons">
+     <p>Color theme</p>
+        <label class="btn btn-primary" style="color: white">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> Black
+        </label>
+        <label class="btn btn-primary" style="color: white">
+            <input type="radio" name="options" id="option2" autocomplete="off" > Graphite
+        </label>
+            <label class="btn btn-primary" style="color: white">
+        <input type="radio" name="options" id="option3" autocomplete="off"> White
+        </label>
+    </div>
+   </div>
+
+</div>

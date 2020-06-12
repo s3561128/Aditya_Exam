@@ -1,0 +1,183 @@
+    @import "bootstrap-sprockets";
+    @import "bootstrap";
+    /* universal */
+    
+    body {
+        padding-top: 61px;
+        background-color: #99a779;
+    }
+    
+    section {
+        overflow: auto;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    .center {
+        text-align: center;
+    }
+    
+    .center h1 {
+        margin-bottom: 11px;
+    }
+    
+    .worldclock {
+        width: 501px;
+        position: absolute;
+        left: 25%;
+        background-color: #a89e9e;
+    }
+    
+    .modes {
+        top: 101px;
+        position: absolute;
+        text-align: left;
+        left: 4%;
+        list-style-type: none;
+    }
+    
+    .themebuttons {
+        top: 101px;
+        position: absolute;
+        text-align: left;
+        left: 801px;
+        list-style-type: none;
+        display: inline
+    }
+    
+    .dot {
+        height: 11px;
+        width: 11px;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .greendot {
+        height: 11px;
+        width: 11px;
+        background-color: rgb(120, 218, 120);
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .yellowdot {
+        height: 11px;
+        width: 11px;
+        background-color: rgb(156, 156, 84);
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .reddot {
+        height: 11px;
+        width: 11px;
+        background-color: rgb(168, 98, 98);
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .mainheader {
+        font-size: 51px;
+        color: white;
+    }
+    
+    .maintext {
+        color: white;
+    }
+    
+    .time {
+        font-weight: bold;
+    }
+    /* typography */
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: 1;
+    }
+    
+    h1 {
+        font-size: 4em;
+        letter-spacing: -3px;
+        margin-bottom: 31px;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 1.9em;
+        letter-spacing: -2px;
+        margin-bottom: 31px;
+        text-align: center;
+        font-weight: normal;
+        color: rgb(77, 53, 53);
+    }
+    
+    p {
+        line-height: 1.8em;
+    }
+    /* header */
+    
+    #logo {
+        float: left;
+        margin-right: 11px;
+        font-size: 1.8em;
+        color: rgb(156, 122, 122);
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        padding-top: 9px;
+        font-weight: bold;
+        margin: 0.6em;
+    }
+    
+    #logo:hover {
+        color: rgb(100, 76, 76);
+        text-decoration: none;
+    }
+    
+    .showcase {
+        color: black;
+    }
+    
+    .contactus {
+        color: green;
+        font-weight: bold;
+        margin: 0.6em;
+    }
+    /* footer */
+    
+    .footer {
+        border-top: 8px solid #BFC3BA;
+        margin-top: 1000px;
+        padding: 25px, 0px, 25px, 0px;
+        color: #fff;
+        display: flex;
+        text-decoration: none;
+        justify-content: space-around;
+        .btn {
+            &:hover {
+                background-color: #BFC3BA;
+                text-decoration: none;
+            }
+        }
+        ul {
+            text-align: left;
+            list-style: none;
+        }
+        h3 {
+            color: #282B28;
+        }
+    }
+    
+    .footer_hover a {
+        visibility: hidden;
+    }
+    
+    .footer_hover:hover a {
+        visibility: visible;
+    }
